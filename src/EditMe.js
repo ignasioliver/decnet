@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import { Link } from 'react-router-dom'
 import './EditMe.css'
 import Card from './Card'
-import { ANIMALS, TERRITORIES } from './constants'
+import { PEOPLE, TERRITORIES } from './constants'
 
 class EditMe extends Component {
 
@@ -43,19 +43,19 @@ class EditMe extends Component {
 
     return (
       <div className="EditMe container">
-      <h2>Your animal persona</h2>
-      <p>You are the ruler of your kingdom! Pick your animal persona and its home!</p>
-        <h3>Select your animal</h3>
+      <h2>Your contacts-regions</h2>
+      <p>Relate a person to its region</p>
+        <h3>Select your contact</h3>
         <div className="row card-deck">
-        { ANIMALS.map((animal, index) => {
+        { PEOPLE.map((animal, index) => {
           const selected = myAnimal && myAnimal.id === animal.id
           return (
-            <Card path='/animals/' key={index} item={animal} select={this.selectAnimal} selected={selected} />
+            <Card path='/people/' key={index} item={animal} select={this.selectAnimal} selected={selected} />
                 )
           })
         }
         </div>
-        <h3 className="select-territory">Select your territory</h3>
+        <h3 className="select-territory">Select your region</h3>
         <div className="card-deck">
         { TERRITORIES.map((territory, index) => {
           const selected = myTerritory && myTerritory.id === territory.id

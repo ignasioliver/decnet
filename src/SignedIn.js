@@ -86,7 +86,7 @@ class SignedIn extends Component {
       <NavBar username={username} signOut={this.signOut}/>
       <Switch>
               <Route
-                path='/animals'
+                path='/people'
                 render={
                   routeProps => <OptionsList
                   type="animals"

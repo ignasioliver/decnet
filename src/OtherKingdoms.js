@@ -67,7 +67,7 @@ class OtherKingdoms extends Component {
     const kingdoms = this.state.kingdoms
     return (
       <div className="OtherKingdoms container">
-          <h2>Other kingdoms</h2>
+          <h2>Other posts</h2>
           <div className="list-group">
           {kingdoms.length === 0 ?
             <div
@@ -110,7 +110,7 @@ class OtherKingdoms extends Component {
                       <h5 class="mb-1">{ kingdom.ruler.username } the { animal ? animal.name : '' }'s kingdom</h5>
                       <span class="badge badge-primary badge-pill" title="Subjects">{ kingdom.subjects.length }</span>
                     </div>
-                    <p class="mb-1">From planet { planet }</p>
+                    <p class="mb-1">From { planet }</p>
                   </Link>
                 )
               }

@@ -20,7 +20,7 @@ class Subject extends Component {
         className={`card ${selected ? 'border-primary' : ''}`}
       >
       <img className="card-img-top"
-        src={`${app}/animals/${animal.id}.jpg`}
+        src={`${app}/people/${animal.id}.jpg`}
         alt={animal.name}
       />
       <div className="card-body">
@@ -28,12 +28,12 @@ class Subject extends Component {
         <p className="card-text">{animal.superpower}<br />
         It hails from the planet { app }.</p>
         {myKingdom ?
-          <button className='btn btn-primary btn-block' onClick={(event) => this.props.removeSubject(event, index)}>Banish from kingdom</button>
+          <button className='btn btn-primary btn-block' onClick={(event) => this.props.removeSubject(event, index)}>Remove from list</button>
           :
           <a
             className='btn btn-primary btn-block'
             href={`${window.location.origin}/kingdom/${currentUsername}?add=${app}/kingdom/${username}`}
-          >Add to my kingdom
+          >Add to my list
           </a>
         }
       </div>

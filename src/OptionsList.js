@@ -1,18 +1,18 @@
 import React, { Component } from 'react'
-import { ANIMALS, TERRITORIES } from './constants'
+import { PEOPLE, TERRITORIES } from './constants'
 import './OptionsList.css'
 
 class OptionsList extends Component {
 
   render() {
     const type = this.props.type
-    let options = ANIMALS
+    let options = PEOPLE
     if (type === 'territories') {
       options = TERRITORIES
     }
     return (
       <div className="OptionsList container">
-          <h2>Available { type } on this planet</h2>
+          <h2>Available contacts</h2>
           <div className="card-deck">
             {options.map((option, index) => {
             return (

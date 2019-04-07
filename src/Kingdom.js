@@ -126,7 +126,7 @@ class Kingdom extends Component {
             style={{backgroundImage: `url('${app}/territories/${rulerTerritory.id}.jpg')`}}
           >
           { rulerAnimal && rulerAnimal.name ?
-            <img className="rounded-circle" src={`${app}/animals/${rulerAnimal.id}.jpg`} alt={rulerAnimal.name} />
+            <img className="rounded-circle" src={`${app}/people/${rulerAnimal.id}.jpg`} alt={rulerAnimal.name} />
             :
             <img className="rounded-circle" src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw=="
             alt="The Ruler" />
@@ -135,22 +135,17 @@ class Kingdom extends Component {
         </div>
         <div className="row ruler">
           <div className="col-lg-12">
-            <h2>Ruler {username}</h2>
-            {rulerAnimal ?
-              <p><a href={`${EXPLORER_URL}/name/${username}`} target="_blank" rel="noopener noreferrer">{username}</a> is a {rulerAnimal.name} that rules over the {rulerTerritory.name}.</p>
-              :
-              <p>{username} is an unknown animal that hails from an unknown land.</p>
-            }
+            <h2>Profile of {username}</h2>
             <p>
-            {mine ? <Link className="btn btn-primary" to="/me" role="button">Edit my animal</Link>
+            {mine ? <Link className="btn btn-primary" to="/me" role="button">Edit my contact</Link>
             : <a
               className='btn btn-primary'
               href={`${window.location.origin}/kingdom/${currentUsername}?add=${app}/kingdom/${username}`}
-            >Add ruler to my kingdom
+            >Add contact to my list
             </a>}
             </p>
             <div className="container">
-              <h2>Subjects</h2>
+              <h2>Selections</h2>
               {mine ?
                 <div className="row justify-content-center">
                   <div
@@ -168,7 +163,7 @@ class Kingdom extends Component {
                         placeholder="https://example.com/kingdom/ruler.id"
                       />
                       <div className="input-group-append">
-                        <input type="submit" className="btn btn-primary" value="Add subject"/>
+                        <input type="submit" className="btn btn-primary" value="Add comtact"/>
                       </div>
                     </form>
                   </div>
